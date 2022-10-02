@@ -14,21 +14,13 @@ function delay_function() {
     if (initialize_var == 0) {
       setTimeout(function() {    
             
-<<<<<<< HEAD
-            img.src = "/static/Photo Resource/ISS 360 0--90.59." + i + ".png";
+            img.src = "Photo Resource/ISS 360 0--90.59." + i + ".png";
             img.height = 550;
             img.width = 1050;
 
             src.appendChild(img);
             //console.log(i);
             i++;
-=======
-          img.src = "/static/Photo Resource/ISS 360 0-90.58." + i + ".png";
-          src.appendChild(img);
-          console.log(i);
-          i++;
-          initialize_var = 1;
->>>>>>> e6840e383a193e177ef812503358cc7ff004315a
     
           if (i <= j) {
               delay_function();
@@ -42,7 +34,7 @@ function delay_function() {
       setTimeout(function() {    
           document.getElementById("img" + (i - 1)).remove();
             
-          img.src = "/static/Photo Resource/ISS 360 0-90.58." + i + ".png";
+          img.src = "Photo Resource/ISS 360 0-90.58." + i + ".png";
           src.appendChild(img);
           console.log(i);
           
@@ -58,23 +50,12 @@ function delay_function() {
     } 
     else if (i > 187 && i < j && i_prev > i) {
 
-<<<<<<< HEAD
             img.src = "/static/Photo Resource/ISS 360 0--90.59." + i + ".png";
             img.height = 550;
             img.width = 1050;
             src.appendChild(img);
             //console.log(i);
             i++;
-=======
-      setTimeout(function() {    
-          document.getElementById("img" + (i + 1)).remove();
-            
-          img.src = "/static/Photo Resource/ISS 360 0-90.58." + i + ".png";
-          src.appendChild(img);
-          console.log(i);
-          i_prev = i;
-          i--;
->>>>>>> e6840e383a193e177ef812503358cc7ff004315a
     
           if (i >= 187) {
               delay_function();
