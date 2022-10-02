@@ -12,6 +12,8 @@ function delay_function() {
       setTimeout(function() {    
             
           img.src = "Images/ISS 360 0-90.58." + i + ".png";
+          img.height = 550
+          img.width = 750
           src.appendChild(img);
           console.log(i);
           i++;
