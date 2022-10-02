@@ -14,13 +14,11 @@ function delay_function() {
     if (initialize_var == 0) {
       setTimeout(function() {    
             
-            img.src = "Photo Resource/ISS 360 0--90.59." + i + ".png";
-            img.height = 550;
-            img.width = 1050;
-
-            src.appendChild(img);
-            //console.log(i);
-            i++;
+          img.src = "/static/Photo Resource/ISS 360 0-90.58." + i + ".png";
+          src.appendChild(img);
+          console.log(i);
+          i++;
+          initialize_var = 1;
     
           if (i <= j) {
               delay_function();
@@ -34,7 +32,7 @@ function delay_function() {
       setTimeout(function() {    
           document.getElementById("img" + (i - 1)).remove();
             
-          img.src = "Photo Resource/ISS 360 0-90.58." + i + ".png";
+          img.src = "/static/Photo Resource/ISS 360 0-90.58." + i + ".png";
           src.appendChild(img);
           console.log(i);
           
@@ -50,12 +48,14 @@ function delay_function() {
     } 
     else if (i > 187 && i < j && i_prev > i) {
 
-            img.src = "/static/Photo Resource/ISS 360 0--90.59." + i + ".png";
-            img.height = 550;
-            img.width = 1050;
-            src.appendChild(img);
-            //console.log(i);
-            i++;
+      setTimeout(function() {    
+          document.getElementById("img" + (i + 1)).remove();
+            
+          img.src = "/static/Photo Resource/ISS 360 0-90.58." + i + ".png";
+          src.appendChild(img);
+          console.log(i);
+          i_prev = i;
+          i--;
     
           if (i >= 187) {
               delay_function();
@@ -105,82 +105,3 @@ function delay_function() {
     }
     
 };
-
-/*
-function delay_function() {
-    const img = document.createElement('img');
-
-    img.id = 'img' + i;
-
-    img.src = "static/images/image" + i + ".jpg";
-
-    var div = document.getElementById("ISSIMG");
-    div.appendChild(img);
-
-    document.getElementById("img" + i).remove();
-
-}
-*/
-
-
-/*
-function test(img, src) {         //  create a loop function
-    i = 1;
-    setTimeout(function() {   //  call a 3s setTimeout when the loop is called
-    var src = document.getElementById("Img232");
-    var img = document.createElement("img");
-
-    img.src = "static/images/image" + i + ".jpg";
-    src.appendChild(img);   //  your code here
-    i++;                    //  increment the counter
-    if (i <= 4) {           //  if the counter < 10, call the loop function
-      insert();             //  ..  again which will trigger another 
-      img.parentNode.removeChild(img);
-    }                       //  ..  setTimeout()
-    }, 5000)
-  }
-
-*/
-
-/*
-function insert(){
-
-    var src = document.getElementById("Img232");
-    var img = document.createElement("img");
-
-    
-
-    img.src = "static/images/image" + i + ".jpg";
-    src.appendChild(img);
-
-
-//    img.parentNode.removeChild(img);
-} 
-*/
-// function sleep(duration) {
-// 	return new Promise(resolve => {
-// 		setTimeout(() => {
-// 			resolve()
-// 		}, duration * 1000)
-// 	})
-// }
-
-// function insert(img, src){
-//     while (true) {
-//         const d = new Date();
-//         let minutes = d.getUTCMinutes();
-//         console.log(minutes);
-//     };
-
-//     for(i = 1; i <= 4; i++){
-//         var src = document.getElementById("Img232");
-//         var img = document.createElement("img");
-
-//         img.src = "static/images/image" + i + ".jpg";
-//         src.appendChild(img);
-//         sleep(1000);
-//         //img.parentNode.removeChild(img);
-//     }
-
-
-// }
