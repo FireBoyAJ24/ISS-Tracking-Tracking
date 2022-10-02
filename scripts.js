@@ -30,6 +30,8 @@ function delay_function() {
           document.getElementById("img" + (i - 1)).remove();
             
           img.src = "Images/ISS 360 0-90.58." + i + ".png";
+          img.height = 550
+          img.width = 750
           src.appendChild(img);
           console.log(i);
           
@@ -49,6 +51,8 @@ function delay_function() {
           document.getElementById("img" + (i + 1)).remove();
             
           img.src = "Images/ISS 360 0-90.58." + i + ".png";
+          img.height = 550
+          img.width = 750
           src.appendChild(img);
           console.log(i);
           i_prev = i;
@@ -69,6 +73,8 @@ function delay_function() {
           img.id = "img" + i;
 
           img.src = "Images/ISS 360 0-90.58." + i + ".png";
+          img.height = 550
+          img.width = 750
           src.appendChild(img);
           console.log(i);
           i_prev = i - 1;
@@ -89,6 +95,8 @@ function delay_function() {
           img.id = "img" + i;
 
           img.src = "Images/ISS 360 0-90.58." + i + ".png";
+          img.height = 550
+          img.width = 750
           src.appendChild(img);
           console.log(i);
           i_prev = i + 1;
