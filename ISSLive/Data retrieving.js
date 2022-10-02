@@ -70,3 +70,7 @@
      }
      return closestOsv;
  }
+
+ for (let r = 0; r < 1; r++) {
+    console.log(osvArray);
+  }
